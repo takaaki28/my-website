@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+
+body{
+  
+}
+
+.box {
+  height: 80px;
+  width: 80px;
+  background-color: white;
+
+  transform-origin: bottom right;
+
+  transition: 1s;
+}
+.in-box {
+  height: 80px;
+  width: 80px;
+  background-color: red;
+
+  transform-origin: bottom right;
+  transition-duration: 1s;
+  z-index: 5;
+}
+
+.box:hover {
+  /* border-radius: 50%;
+  background-color: blue; */
+  /* transition-property: border-radius; */
+
+  
+  
+  /* transform: translate(40px, -40px); */
+  /* transform: translateX(40px); */
+  /* transform: translateY(-40px); */
+  
+  /* 回転 */
+  transform: rotate(45deg);
+
+  /* X/Y軸拡大縮小 */
+  /* transform: scale(2, 0.5); */
+
+  /* 回転＋縮小 */
+  transform: rotate(45deg) scale(0.5);
+
+}
+.in-box:hover {
+  /* border-radius: 50%; */
+  /* background-color: blue; */
+
+  /* 縮小 */
+  /* transform: scale(0.5); */
+}
+
+/* .box:hover { */
+  /* 回転 */
+  /* transform: rotate(45deg); */
+/* } */
+/* .in-box:hover { */
+  /* 縮小 */
+  /* transform: scale(0.5); */
+/* } */
+
+
+
