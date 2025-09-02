@@ -1,0 +1,106 @@
+@charset "utf-8";
+
+
+.btn1 {
+  all:unset;
+  border: solid 4px black;
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 8px;
+  cursor: pointer;
+  transition: background-color 0.5s, color 3s;
+}
+
+.btn1:hover {
+  background-color: black;
+  color: white;
+}
+
+.loading {
+  width: 32px;
+  height: 32px;
+  border-top: solid 8px red;
+  border-right: solid 8px blue;
+  border-bottom: solid 8px green;
+  border-left: solid 8px yellow;
+  border-radius: 50%;
+  
+  /* animation-name: move-rotate;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; */
+
+  animation: move-rotate 2s infinite linear;
+}
+
+@keyframes move-rotate {
+  0% {
+    transform:rotate(0deg);
+  }
+  25% {
+    rotate: 90deg;
+  }
+  50% {
+    rotate: 180deg;
+  }
+  75% {
+    rotate: 270deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+
+
+
+.message {
+  width: 300px;
+  background-color: blue;
+  padding: 8px 16px;
+  border-radius: 4px;
+
+  color: white;
+  font-weight: bold;
+
+  /* 固定位置に配置 */
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+
+  /* アニメーション設定 */
+  animation: popup 2s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes popup{
+  0%{
+    transform:translateY(10px);
+    opacity:0;
+    /* transform:rotate(0deg) scale(0) translateY(50px); */
+  }
+  20%{
+    transform:translateY(0px);
+    opacity:1;
+    /* transform:rotate(45deg) scale(0.2) translateY(0px); */
+  }
+  80%{
+    transform:translateY(0px);
+    opacity:1;
+    /* transform:rotate(315deg) scale(0.8) translateY(0px); */
+  }
+  100%{
+    transform:translateY(10px);
+    opacity:0;
+    /* transform:rotate(360deg) scale(1) translateY(50px); */
+    pointer-events: none;
+  }
+}
+
+.test-btn {
+  width: 300px;
+  padding: 16px;
+  position: fixed;
+  right:32px;
+  bottom: 32px;
+}
